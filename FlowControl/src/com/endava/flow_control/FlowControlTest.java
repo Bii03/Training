@@ -65,9 +65,19 @@ public class FlowControlTest {
 //			}
 //		}
 		
-		vector.add("lala");
-		vector.add("aaa");
-		writeList();
+		
+		/*
+		 * Third example
+		 */
+//		vector.add("lala");
+//		vector.add("aaa");
+//		writeList();
+		
+		/*
+		 * Fourth example
+		 */
+		System.out.println(FinallyDemo.method1());
+		FinallyDemo.method2();
 
 	}
 
