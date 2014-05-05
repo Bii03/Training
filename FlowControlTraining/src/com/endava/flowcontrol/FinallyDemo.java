@@ -1,9 +1,8 @@
-package com.endava.flow_control;
+package com.endava.flowcontrol;
 
 public class FinallyDemo {
-	
 
-	static int method1() {
+	public static int method1() {
         try {
             return 2;
         } finally {
@@ -11,7 +10,7 @@ public class FinallyDemo {
         }
     }
 
-    static void method2() {
+    public static void method2() {
         try {
             throw new RuntimeException("Unchecked error");
         } finally {
