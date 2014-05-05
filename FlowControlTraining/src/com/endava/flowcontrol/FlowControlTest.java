@@ -74,11 +74,32 @@ public class FlowControlTest {
 //		vector.add("aaa");
 //		writeList();
 		
+		
+		
 		/*
 		 * Fourth example
 		 */
-		System.out.println(FinallyDemo.method1());
-		FinallyDemo.method2();
+//		System.out.println(FinallyDemo.method1());
+//		FinallyDemo.method2();
+		
+		
+		
+		/*
+		 * Fifth example
+		 */
+		
+		int a[] = new int[2];
+	      try{
+	         System.out.println("Access element three :" + a[3]);
+	      }catch(ArrayIndexOutOfBoundsException e){
+	         System.out.println("Exception thrown  :" + e);
+	         throw new RuntimeException("New exception");
+	      }
+	      finally{
+	         a[0] = 6;
+	         System.out.println("First element value: " +a[0]);
+	         System.out.println("The finally statement is executed");
+	      }
 
 	}
 
