@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: btesila
+Build-Jdk: 1.8.0_05
+Class-Path: conf/ dependency/slf4j-api-1.7.7.jar
+Main-Class: com.endava.shape.ShapeTest
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,18 @@
+package com.endava.shape;
+
+/**
+ * Hello world!
+ *
+ */
+public class ShapeTest 
+{
+	public static double computeShapeArea(Shape shape){
+		return shape.computeArea();
+	}
+	
+    public static void main( String[] args )
+    {
+        Shape circle = new Circle(2.2);
+        System.out.println(computeShapeArea(circle));
+    }
+}

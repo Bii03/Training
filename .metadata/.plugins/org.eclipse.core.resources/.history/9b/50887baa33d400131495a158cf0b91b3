@@ -1,0 +1,38 @@
+package com.endava.shape;
+
+public class Triangle extends Shape{
+	private double height;
+	private double base;
+	private static final String FIGURE_NAME = "Triangle";
+	
+	public Triangle(){
+		super();
+	}
+	
+	public Triangle(double height, double base) {
+		super();
+		this.height = height;
+		this.base = base;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public double getBase() {
+		return base;
+	}
+	public void setBase(double base) {
+		this.base = base;
+	}
+
+	@Override
+	public double computeArea() {
+		// TODO Auto-generated method stub
+		return (height*base)/2;
+	}
+	
+	
+
+}

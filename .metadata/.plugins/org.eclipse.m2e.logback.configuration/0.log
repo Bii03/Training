@@ -1,0 +1,63 @@
+2014-05-05 11:38:45,676 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Shapes:Shapes:0.0.1-SNAPSHOT @ D:\Grads\Shapes\pom.xml.
+2014-05-05 11:38:45,967 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Shapes:Shapes:0.0.1-SNAPSHOT @ D:\Grads\Shapes\pom.xml.
+2014-05-05 11:38:45,988 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Shapes:Shapes:0.0.1-SNAPSHOT @ D:\Grads\Shapes\pom.xml.
+2014-05-05 11:38:47,089 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:47,090 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:38:47,091 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:47,091 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:38:48,378 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:48,378 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:38:48,379 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:48,380 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:38:48,394 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Shapes:Shapes:0.0.1-SNAPSHOT @ D:\Grads\Shapes\pom.xml.
+2014-05-05 11:38:48,456 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: Shapes:Shapes:0.0.1-SNAPSHOT @ D:\Grads\Shapes\pom.xml.
+2014-05-05 11:38:49,453 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:49,453 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:38:49,454 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:49,455 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:38:56,472 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:56,472 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:38:56,473 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:38:56,473 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:55:00,335 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:55:00,336 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:55:00,337 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:55:00,337 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:56:28,740 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:56:28,740 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:56:28,741 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:56:28,741 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:57:58,217 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:57:58,218 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:57:58,219 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:57:58,220 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:58:24,685 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:58:24,685 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:58:24,686 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:58:24,686 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 11:58:39,202 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:58:39,202 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 11:58:39,203 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 11:58:39,203 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 12:00:01,436 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:00:01,437 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 12:00:01,439 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:00:01,439 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 12:00:12,136 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:00:12,136 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 12:00:12,137 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:00:12,137 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 12:01:14,943 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:01:14,943 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 12:01:14,946 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:01:14,947 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 12:03:34,413 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:03:34,415 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 12:03:34,416 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:03:34,417 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources
+2014-05-05 12:03:46,693 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Grads\Shapes
+2014-05-05 12:03:46,693 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B install
+2014-05-05 12:03:49,312 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:03:49,312 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\main\resources
+2014-05-05 12:03:49,314 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-05-05 12:03:49,314 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Grads\Shapes\src\test\resources

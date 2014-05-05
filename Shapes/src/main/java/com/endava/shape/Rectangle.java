@@ -1,0 +1,46 @@
+package com.endava.shape;
+
+public class Rectangle extends Shape{
+	private double height;
+	private double width;
+	public static final String FIGURE_NAME = "Rectangle";
+	
+	
+	public Rectangle(){
+		super();
+	}
+	
+	public Rectangle(double height, double width) {
+		super();
+		this.height = height;
+		this.width = width;
+	}
+	public double getHeight() {
+		return height;
+	}
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	public double getWidth() {
+		return width;
+	}
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	@Override
+	public double computeArea() {
+		// TODO Auto-generated method stub
+		return height*width;
+	}
+	
+	@Override
+	public void helloWorld() {
+		// TODO Auto-generated method stub
+		super.helloWorld();
+		System.out.println("Hello world from a "+FIGURE_NAME);
+	}
+	
+	
+
+}
