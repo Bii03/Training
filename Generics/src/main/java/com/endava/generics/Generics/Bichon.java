@@ -26,5 +26,8 @@ public class Bichon extends Dog{
 	public void addAnimals(List<? super Dog> animals, Dog dog){
 		animals.add(dog);
 	}
+	
+	
+	
 
 }
