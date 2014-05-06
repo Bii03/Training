@@ -17,5 +17,6 @@ public class App
     	logger.info("Info message");
     	logger.warn("Warn message");
     	logger.error("Error message");
+
     }
 }
