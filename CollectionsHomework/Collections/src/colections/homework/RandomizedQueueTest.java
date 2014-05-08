@@ -19,23 +19,41 @@ public class RandomizedQueueTest {
 	    	System.out.print(randomizedQueue.sample() +" ");
 	   
 	    System.out.println();
+	    System.out.println();
+	    System.out.println();
 
 
 	    System.out.println("Testing the iterator:");
-	    
-	    Iterator<Integer> I= randomizedQueue.iterator();
-        Iterator<Integer> J= randomizedQueue.iterator();
+	    Iterator<Integer> firstIterator= randomizedQueue.iterator();
+        Iterator<Integer> secondIterator= randomizedQueue.iterator();
         
-        while(I.hasNext()){
-        	System.out.println(I.next());
+        while(firstIterator.hasNext()){
+        	System.out.println(firstIterator.next());
         }
         System.out.println();
         System.out.println();
         System.out.println();
         
-        while(J.hasNext()){
-        	System.out.println(J.next());
+        while(secondIterator.hasNext()){
+        	System.out.println(secondIterator.next());
         }
+        
+        
+        System.out.println();
+        System.out.println();
+        System.out.println();
+       
+        
+        System.out.println("Testing deque:");
+        System.out.println(randomizedQueue.dequeue());
+        System.out.println(randomizedQueue.dequeue());  
+        Iterator<Integer> thirdIterator = randomizedQueue.iterator();
+        System.out.println();
+        
+        while(thirdIterator.hasNext()){
+        	System.out.println(thirdIterator.next());
+        }
+        
 	}
 	
 }
