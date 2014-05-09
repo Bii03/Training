@@ -106,25 +106,20 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 	private class RandomizedQueueIterator implements Iterator<Item> {
 
-		private int cursor;
-		int[] cursorPositions;
+		private int offsetIndex;
+		private int iteratedItemsCount;
+
 
 		public RandomizedQueueIterator() {
 			// TODO Auto-generated constructor stub
-
-			cursorPositions = new int[currentQueueSize];
-
-			for (int i = cursorPositions.length - 1; i > 0; i--) {
-				cursorPositions[i] = i;
-			}
-
-			shuffleArray(cursorPositions);
+			offsetIndex = randomGenerator.nextInt(currentQueueSize);
+			
 		}
 
 		@Override
 		public boolean hasNext() {
 			// TODO Auto-generated method stub
-			return cursor < currentQueueSize;
+			return iteratedItemsCount < currentQueueSize;
 		}
 
 		@Override
@@ -133,8 +128,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			if (!hasNext()) {
 				throw new NoSuchElementException();
 			}
-
-			return queue[cursorPositions[cursor++]];
+			
+			iteratedItemsCount++;
+			
+			if(offsetIndex < currentQueueSize){
+				return queue[offsetIndex++];
+			}
+			
+			offsetIndex = 0;
+			return queue[offsetIndex++];
 					
 		}
 
@@ -144,17 +146,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			throw new UnsupportedOperationException();
 		}
 
-		void shuffleArray(int[] arrayToShuffle) {
 
-			for (int i = arrayToShuffle.length - 1; i > 0; i--) {
-
-				int index = randomGenerator.nextInt(i + 1);
-
-				int a = arrayToShuffle[index];
-				arrayToShuffle[index] = arrayToShuffle[i];
-				arrayToShuffle[i] = a;
-			}
-		}
 
 	}
 
