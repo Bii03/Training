@@ -10,12 +10,14 @@ import java.util.Random;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
-	private List<Item> queue = new ArrayList<>();
+	private List<Item> queue; 
 
-	private Random randomGenerator = new Random();
+	private Random randomGenerator;
 
 	public RandomizedQueue() {
 		// TODO Auto-generated constructor stub
+		queue = new ArrayList<>();
+		randomGenerator = new Random();
 	}
 
 	public boolean isEmpty() {
@@ -63,10 +65,12 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	private class RandomizedQueueIterator implements Iterator<Item> {
 
 		private int cursor;
-		int[] cursorPositions = new int[queue.size()];
+		int[] cursorPositions;
 
 		public RandomizedQueueIterator() {
 			// TODO Auto-generated constructor stub
+			
+			cursorPositions = new int[queue.size()];
 			
 			for (int i = cursorPositions.length - 1; i > 0; i--) {
 				cursorPositions[i] = i;
