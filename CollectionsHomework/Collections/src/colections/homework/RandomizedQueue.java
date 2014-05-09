@@ -10,22 +10,28 @@ import java.util.Random;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
-	private List<Item> queue; 
+	private Item[] queue;
+
+	private int queueCapacity;
+
+	private int currentQueueSize;
 
 	private Random randomGenerator;
 
 	public RandomizedQueue() {
 		// TODO Auto-generated constructor stub
-		queue = new ArrayList<>();
+
+		queueCapacity = 1;
+		queue = (Item[]) new Object[queueCapacity];
 		randomGenerator = new Random();
 	}
 
 	public boolean isEmpty() {
-		return queue.isEmpty();
+		return currentQueueSize == 0;
 	}
 
 	public int size() {
-		return queue.size();
+		return currentQueueSize;
 	}
 
 	public void enqueue(Item item) {
@@ -34,7 +40,11 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 					"You are not allowed to enqueue null items");
 		}
 
-		queue.add(item);
+		if (currentQueueSize + 1 > queueCapacity) {
+			increaseQueueCapacity();
+		}
+
+		queue[currentQueueSize++] = item;
 	}
 
 	public Item dequeue() {
@@ -43,7 +53,39 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 					"You are not allowed to dequeue. The queue is empty.");
 		}
 
-		return this.queue.remove(randomGenerator.nextInt(this.queue.size()));
+		int indexFromWhereToDequeue = randomGenerator.nextInt(currentQueueSize);
+		Item itemToDequeue = queue[indexFromWhereToDequeue];
+		queue[indexFromWhereToDequeue] = queue[--currentQueueSize];
+		queue[currentQueueSize] = null;
+
+		if (currentQueueSize < queueCapacity / 4) {
+			decreaseQueueCapacity();
+		}
+
+		return itemToDequeue;
+
+	}
+
+	public void increaseQueueCapacity() {
+		queueCapacity *= 2;
+		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
+		int offsetIndex = 0;
+		
+		for (Item i : queue) {
+			resizedQueue[offsetIndex++] = i;
+		}
+		queue = resizedQueue;
+	}
+
+	public void decreaseQueueCapacity() {
+		queueCapacity /= 2;
+		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
+		int offsetIndex = 0;
+		
+		for (Item i : queue) {
+			resizedQueue[offsetIndex++] = i;
+		}
+		queue = resizedQueue;
 
 	}
 
@@ -53,7 +95,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 					"You are not allowed to sample. The queue is empty.");
 		}
 
-		return this.queue.get(randomGenerator.nextInt(this.queue.size()));
+		return queue[randomGenerator.nextInt(currentQueueSize)];
 	}
 
 	@Override
@@ -69,9 +111,9 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 		public RandomizedQueueIterator() {
 			// TODO Auto-generated constructor stub
-			
-			cursorPositions = new int[queue.size()];
-			
+
+			cursorPositions = new int[currentQueueSize];
+
 			for (int i = cursorPositions.length - 1; i > 0; i--) {
 				cursorPositions[i] = i;
 			}
@@ -82,7 +124,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		@Override
 		public boolean hasNext() {
 			// TODO Auto-generated method stub
-			return cursor < queue.size();
+			return cursor < currentQueueSize;
 		}
 
 		@Override
@@ -92,7 +134,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 				throw new NoSuchElementException();
 			}
 
-			return queue.get(cursorPositions[cursor++]);
+			return queue[cursorPositions[cursor++]];
+					
 		}
 
 		@Override
@@ -104,7 +147,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		void shuffleArray(int[] arrayToShuffle) {
 
 			for (int i = arrayToShuffle.length - 1; i > 0; i--) {
-				
+
 				int index = randomGenerator.nextInt(i + 1);
 
 				int a = arrayToShuffle[index];
