@@ -19,8 +19,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	private Random randomGenerator;
 
 	public RandomizedQueue() {
-		// TODO Auto-generated constructor stub
-
+//capacitatea initiala poti sa o pui ceva mai mare
 		queueCapacity = 1;
 		queue = (Item[]) new Object[queueCapacity];
 		randomGenerator = new Random();
@@ -47,6 +46,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		queue[currentQueueSize++] = item;
 	}
 
+// aici e un mic bug pentru ca elementul sters nu este acelasi cu elementul returnat.
 	public Item dequeue() {
 		if (this.isEmpty()) {
 			throw new NoSuchElementException(
@@ -65,7 +65,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		return itemToDequeue;
 
 	}
-
+	
+// colectia nu pune la dispozitie metoda asta, deci asta inseamna ca metoda trebuie sa fie....?
 	public void increaseQueueCapacity() {
 		queueCapacity *= 2;
 		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
@@ -77,6 +78,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		queue = resizedQueue;
 	}
 
+// colectia nu pune la dispozitie metoda asta, deci asta inseamna ca metoda trebuie sa fie....?
 	public void decreaseQueueCapacity() {
 		queueCapacity /= 2;
 		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
@@ -107,7 +109,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	private class RandomizedQueueIterator implements Iterator<Item> {
 
 		private int offsetIndex;
-		private int iteratedItemsCount;
+		private int iteratedItemsCount; // unde initializezi proprietatea asta? e mai clar
+						//cand stii de la ce valoare pleci
 
 
 		public RandomizedQueueIterator() {
@@ -121,6 +124,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			// TODO Auto-generated method stub
 			return iteratedItemsCount < currentQueueSize;
 		}
+
+//cazul asta cu mai mult de 1 return e ok pentru ca nu ai logica multa dar
+//in general metoda trebuie sa aiba cat mai putine return-uri (daca poti pune doar unul ar fi super).
+//metodele cu multe return-uri sunt obositoare la citire/intelegere. 
 
 		@Override
 		public Item next() {
