@@ -19,8 +19,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	private Random randomGenerator;
 
 	public RandomizedQueue() {
-//capacitatea initiala poti sa o pui ceva mai mare
-		queueCapacity = 1;
+
+		queueCapacity = 10;
 		queue = (Item[]) new Object[queueCapacity];
 		randomGenerator = new Random();
 	}
@@ -46,7 +46,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		queue[currentQueueSize++] = item;
 	}
 
-// aici e un mic bug pentru ca elementul sters nu este acelasi cu elementul returnat.
 	public Item dequeue() {
 		if (this.isEmpty()) {
 			throw new NoSuchElementException(
@@ -55,8 +54,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 		int indexFromWhereToDequeue = randomGenerator.nextInt(currentQueueSize);
 		Item itemToDequeue = queue[indexFromWhereToDequeue];
-		queue[indexFromWhereToDequeue] = queue[--currentQueueSize];
-		queue[currentQueueSize] = null;
+		queue[indexFromWhereToDequeue] = queue[currentQueueSize-1];
+		queue[--currentQueueSize] = null;
 
 		if (currentQueueSize < queueCapacity / 4) {
 			decreaseQueueCapacity();
@@ -66,8 +65,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 	}
 	
-// colectia nu pune la dispozitie metoda asta, deci asta inseamna ca metoda trebuie sa fie....?
-	public void increaseQueueCapacity() {
+
+	private void increaseQueueCapacity() {
 		queueCapacity *= 2;
 		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
 		int offsetIndex = 0;
@@ -78,8 +77,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		queue = resizedQueue;
 	}
 
-// colectia nu pune la dispozitie metoda asta, deci asta inseamna ca metoda trebuie sa fie....?
-	public void decreaseQueueCapacity() {
+
+	private void decreaseQueueCapacity() {
 		queueCapacity /= 2;
 		Item[] resizedQueue = (Item[]) new Object[queueCapacity];
 		int offsetIndex = 0;
@@ -109,13 +108,13 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	private class RandomizedQueueIterator implements Iterator<Item> {
 
 		private int offsetIndex;
-		private int iteratedItemsCount; // unde initializezi proprietatea asta? e mai clar
-						//cand stii de la ce valoare pleci
+		private int iteratedItemsCount; 
 
 
 		public RandomizedQueueIterator() {
 			// TODO Auto-generated constructor stub
 			offsetIndex = randomGenerator.nextInt(currentQueueSize);
+			iteratedItemsCount = 0;
 			
 		}
 
@@ -125,9 +124,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			return iteratedItemsCount < currentQueueSize;
 		}
 
-//cazul asta cu mai mult de 1 return e ok pentru ca nu ai logica multa dar
-//in general metoda trebuie sa aiba cat mai putine return-uri (daca poti pune doar unul ar fi super).
-//metodele cu multe return-uri sunt obositoare la citire/intelegere. 
+
 
 		@Override
 		public Item next() {
@@ -138,11 +135,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 			
 			iteratedItemsCount++;
 			
-			if(offsetIndex < currentQueueSize){
-				return queue[offsetIndex++];
+			if(offsetIndex >= currentQueueSize){
+				offsetIndex = 0;
 			}
-			
-			offsetIndex = 0;
+
 			return queue[offsetIndex++];
 					
 		}

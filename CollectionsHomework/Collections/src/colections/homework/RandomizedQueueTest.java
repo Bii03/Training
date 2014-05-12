@@ -12,6 +12,9 @@ public class RandomizedQueueTest {
 	    
 		for (int i = 1; i < 12; ++i) 
 	    	randomizedQueue.enqueue(i); 
+		
+		System.out.println("DEQUE " +randomizedQueue.dequeue());
+		
 
 
 	    System.out.print("Testing sample: ");
