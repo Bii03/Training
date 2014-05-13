@@ -31,12 +31,15 @@ public class CircularList<T> implements Serializable{
 			head.setNext(head);
 		}
 		else{
+			Node lastNode = head.getNext();
 			head.setNext(nodeToBeAdded);
-			nodeToBeAdded.setNext(head);
+			nodeToBeAdded.setNext(lastNode);
 		}
 		
 	}
 	
+	
+
 	
 	
 	public void printList() {
@@ -47,9 +50,8 @@ public class CircularList<T> implements Serializable{
         Node currentNode = this.head;
 
         while (currentNode.getNext() != this.head) {
-        	
-        	 System.out.println(currentNode);
         	currentNode = currentNode.getNext();
+        	 System.out.println(currentNode);
            
         }
 
@@ -87,6 +89,12 @@ public class CircularList<T> implements Serializable{
 
 		public void setNext(Node next) {
 			this.next = next;
+		}
+		
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return "Node "+value;
 		}
 
 	}

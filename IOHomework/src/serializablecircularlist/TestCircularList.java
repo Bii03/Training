@@ -14,8 +14,9 @@ public class TestCircularList {
 		for(int i=0; i<10; i++){
 			circularList.add(i);
 		}
+		circularList.printList();
 		
-		SerializeDeserializeObject utilObject = new SerializeDeserializeObject("list.txt");
+		SerializeDeserializeObject utilObject = new SerializeDeserializeObject("list.ser");
 		
 		utilObject.serializeObject(circularList);
 		
@@ -26,6 +27,8 @@ public class TestCircularList {
 			e1.printStackTrace();
 		}
 		
-		utilObject.deserializeObject();
+		circularList = (CircularList<Integer>) utilObject.deserializeObject();
+		circularList.printList();
+		
 	}
 }

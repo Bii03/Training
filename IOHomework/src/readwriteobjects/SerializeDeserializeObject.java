@@ -42,7 +42,7 @@ public class SerializeDeserializeObject<T> {
 
 	}
 	
-	public void deserializeObject() throws IOException, ClassNotFoundException{
+	public T deserializeObject() throws IOException, ClassNotFoundException{
 		FileInputStream fileIn = null;
 		ObjectInputStream in = null;
 		T objectToBeDeserialized = null;
@@ -52,6 +52,7 @@ public class SerializeDeserializeObject<T> {
 			in = new ObjectInputStream(fileIn);
 			objectToBeDeserialized = (T)in.readObject();
 			System.out.println(objectToBeDeserialized);
+			return objectToBeDeserialized;
 		}finally{
 			if(in != null){
 				in.close();
