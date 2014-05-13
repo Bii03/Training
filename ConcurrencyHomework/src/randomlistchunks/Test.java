@@ -1,6 +1,7 @@
 package randomlistchunks;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -54,6 +55,8 @@ public class Test {
 		System.out.println("Chunk size "+chunkSize);
 		System.out.println("Last chunk size "+lastChunkSize);
 		
+		long startMillis = System.currentTimeMillis();
+		
 		for(int i=0; i<numberOfThreads; i++){
 			int startOffset = i*chunkSize+1;
 			int endOffset = (i+1)*chunkSize;
@@ -80,9 +83,15 @@ public class Test {
 	            }
 		 }
 		 
+		 long endMillis = System.currentTimeMillis();
+		 
+		 System.out.println("Elapsed time "+(endMillis - startMillis));
+		 
 		 System.out.println("Prime number list "+primeList);
 		 
 		 System.out.println("The result is "+(primeList.size()==correctPrimeList.size() && primeList.containsAll(correctPrimeList)));
+		 
+		 
 	}
 	
 	

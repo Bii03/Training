@@ -40,7 +40,8 @@ public class Test {
 		int numberOfThreads = Integer.parseInt(JOptionPane.showInputDialog("Give the number of threads"));
 		System.out.println("Number of threads "+numberOfThreads);
 		
-
+		
+		long startMillis = System.currentTimeMillis();
 		
 		for(int i=0; i<numberOfThreads; i++){
 
@@ -58,6 +59,10 @@ public class Test {
 	                e.printStackTrace();
 	            }
 		 }
+		 
+		 long endMillis = System.currentTimeMillis();
+		 
+		 System.out.println("Elapsed time "+(endMillis - startMillis));
 		 
 		 System.out.println("Prime number list "+primeList);
 		 
