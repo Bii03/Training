@@ -1,4 +1,4 @@
-package randomlist;
+package randomlistwithoutchunks;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,15 +6,10 @@ import java.util.Random;
 
 import javax.swing.JOptionPane;
 
+import randomlistwithoutchunks.ListThread;
 
-/**
- * Get the prime numbers from a random list using multiple threads that receive chunks from the list
- * @author btesila
- *
- */
 public class Test {
-	
-	
+
 	public static boolean isPrime(int number){
 		for (int i = 2; i <= number/2; i++)
             if (number % i == 0)
@@ -22,11 +17,8 @@ public class Test {
 
         return true;
 	}
-
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
 		Random randomGenerator = new Random();
 		List<Integer> randomList = new ArrayList<>();
 		
@@ -48,25 +40,12 @@ public class Test {
 		int numberOfThreads = Integer.parseInt(JOptionPane.showInputDialog("Give the number of threads"));
 		System.out.println("Number of threads "+numberOfThreads);
 		
-		int chunkSize = randomList.size()/numberOfThreads;
-		int lastChunkSize = chunkSize+randomList.size()%numberOfThreads;
-		
-		System.out.println("Chunk size "+chunkSize);
-		System.out.println("Last chunk size "+lastChunkSize);
+
 		
 		for(int i=0; i<numberOfThreads; i++){
-			int startOffset = i*chunkSize+1;
-			int endOffset = (i+1)*chunkSize;
-			
-			if(i == 0){
-				startOffset = 0;
-			}
-			
-			if(i == numberOfThreads-1){
-				endOffset = startOffset+lastChunkSize-1;
-			}
-			Thread threadToBeAdded = new Thread(new ListThread(randomList, primeList, startOffset, endOffset));
-			System.out.println("Thread "+ListThread.currentID+" starts from "+startOffset+" and ends at "+endOffset);
+
+			Thread threadToBeAdded = new Thread(new ListThread(randomList, primeList));
+			System.out.println("Thread "+ListThread.currentID+" starts");
 			threadList.add(threadToBeAdded);
 			threadToBeAdded.start();
 		}
@@ -84,7 +63,4 @@ public class Test {
 		 
 		 System.out.println("The result is "+(primeList.size()==correctPrimeList.size() && primeList.containsAll(correctPrimeList)));
 	}
-	
-	
-
 }

@@ -1,4 +1,4 @@
-package randomlist;
+package randomlistchunks;
 
 import java.util.List;
 
