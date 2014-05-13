@@ -15,7 +15,7 @@ public class CryptDecryptFactory {
 	private static CryptDecryptFactory INSTANCE = null;
 	
 	private CryptDecryptFactory(){
-		throw new RuntimeException("Gotcha! Not allowed to access a private constructor!");
+		
 	}
 	
 	public static ICryptDecrypt createCryptDecrypt(CryptDecryptType cryptDecryptType){

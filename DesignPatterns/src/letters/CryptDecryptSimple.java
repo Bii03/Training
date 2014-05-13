@@ -27,13 +27,14 @@ public class CryptDecryptSimple implements ICryptDecrypt{
 			
 			int r;
 			while((r = reader.read()) != -1){
-				String key = String.valueOf((char) r);
+				String key = String.valueOf((char) r).toLowerCase();
 				
 				if(hashMap.containsKey(key)){
 					int value = hashMap.get(key);
-					writer.append(value+" ");
-					
+					writer.append(value+" ");	
 				}
+
+
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
