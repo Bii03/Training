@@ -1,0 +1,2 @@
+SELECT MAX(Salariu) as MaximumSalary, Departament_idDepartament as Departament FROM ex2.salariat Inner join ex2.departament on 
+ex2.salariat.Departament_idDepartament = ex2.departament.idDepartament where Denumire like "i%" group by Departament_idDepartament having count(idSalariat) > 10;

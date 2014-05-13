@@ -1,0 +1,1 @@
+update ex2.salariat set Salariu=0.9*Salariu where Departament_idDepartament = (SElect idDepartament from ex2.departament where Denumire="IT");

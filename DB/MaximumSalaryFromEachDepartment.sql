@@ -1,0 +1,1 @@
+Select max(Salariu) AS MaximumSalary, Departament_idDepartament AS Departament from ex2.salariat group by Departament_idDepartament;
