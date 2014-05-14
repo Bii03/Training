@@ -1,5 +1,7 @@
 package com.endava.web.fundamentals.WEBFundamentals;
 
+import html.Petstore;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +24,9 @@ import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import server.ElementaryHTTPServer;
+import json.*;
+
 /**
  * Hello world!
  *
@@ -31,9 +36,20 @@ import org.codehaus.jackson.map.ObjectMapper;
 public class App 
 {
 	
+	
+	
+	
+	
     public static void main( String[] args ) throws Exception
     {
-    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20003);
+    	File jsonFile = new File("JSONFromWEB.txt");
+    	File htmlFile = new File("PetStore.html");
+    	JSONFromURL.getHTMLFromURL("http://petstore.swagger.wordnik.com/api/api-docs", jsonFile);
+        JsonNode rootNode = JSONFromURL.getJSONRootFromFile(jsonFile);
+        Petstore petStoreHTML = new Petstore(rootNode, htmlFile);
+        petStoreHTML.writeInfo();   
+        
+    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20004);
     	httpServer.start();
   
 

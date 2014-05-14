@@ -1,4 +1,4 @@
-package com.endava.web.fundamentals.WEBFundamentals;
+package server;
 
 import java.io.File;
 import java.io.IOException;
@@ -65,7 +65,7 @@ public class ElementaryHTTPServer {
 
 	        // Set up request handlers
 	        UriHttpRequestHandlerMapper reqistry = new UriHttpRequestHandlerMapper();
-	        reqistry.register("/", new PetStorePage());
+	        reqistry.register("/", new PetStoreRequestHandler());
 
 	        // Set up the HTTP service
 	        HttpService httpService = new HttpService(httpproc, reqistry);

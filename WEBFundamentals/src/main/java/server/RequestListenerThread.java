@@ -1,4 +1,4 @@
-package com.endava.web.fundamentals.WEBFundamentals;
+package server;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
