@@ -25,6 +25,7 @@ import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import entities.Swagger;
 import server.ElementaryHTTPServer;
 import json.*;
 
@@ -45,7 +46,7 @@ public class App
     {
     	InputStream jsonInputSTream = JSONFromURL.getHTMLFromURL("http://petstore.swagger.wordnik.com/api/api-docs");
     	ObjectMapper mapper = new ObjectMapper();
-    	SwaggerDoc swaggerDoc =  mapper.readValue(jsonInputSTream, SwaggerDoc.class);
+    	Swagger swaggerDoc =  mapper.readValue(jsonInputSTream, Swagger.class);
     	
     	
         

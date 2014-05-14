@@ -1,4 +1,4 @@
-package json;
+package entities;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 

@@ -1,9 +1,9 @@
-package json;
+package entities;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class SwaggerDoc {
+public class Swagger {
 	
 	private String apiVersion;
 	private Info info;
