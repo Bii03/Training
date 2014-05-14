@@ -49,7 +49,7 @@ public class App
         Petstore petStoreHTML = new Petstore(rootNode, htmlFile);
         petStoreHTML.writeInfo();   
         
-    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20004);
+    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20006);
     	httpServer.start();
   
 
