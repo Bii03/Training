@@ -5,6 +5,7 @@ import html.Petstore;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 
 
@@ -42,15 +43,14 @@ public class App
 	
     public static void main( String[] args ) throws Exception
     {
-    	File jsonFile = new File("JSONFromWEB.txt");
-    	File htmlFile = new File("PetStore.html");
-    	JSONFromURL.getHTMLFromURL("http://petstore.swagger.wordnik.com/api/api-docs", jsonFile);
-        JsonNode rootNode = JSONFromURL.getJSONRootFromFile(jsonFile);
-        Petstore petStoreHTML = new Petstore(rootNode, htmlFile);
-        petStoreHTML.writeInfo();   
+    	InputStream jsonInputSTream = JSONFromURL.getHTMLFromURL("http://petstore.swagger.wordnik.com/api/api-docs");
+    	ObjectMapper mapper = new ObjectMapper();
+    	SwaggerDoc swaggerDoc =  mapper.readValue(jsonInputSTream, SwaggerDoc.class);
+    	
+    	
         
-    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20006);
-    	httpServer.start();
+//    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20008);
+//    	httpServer.start();
   
 
     	

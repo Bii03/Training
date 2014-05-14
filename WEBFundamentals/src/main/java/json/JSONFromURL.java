@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
@@ -20,7 +21,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 public class JSONFromURL {
 	
-	public static void getHTMLFromURL(String url, File outputFile) throws ClientProtocolException, IOException{
+	public static InputStream getHTMLFromURL(String url) throws ClientProtocolException, IOException{
 		HttpClient client = HttpClientBuilder.create().build();
     	HttpGet request = new HttpGet(url);
 
@@ -28,27 +29,11 @@ public class JSONFromURL {
      
     	System.out.println("Response Code : " 
                     + response.getStatusLine().getStatusCode());
-     
-    	BufferedReader rd = new BufferedReader(
-    		new InputStreamReader(response.getEntity().getContent()));
     	
-    	PrintWriter writer = new PrintWriter(outputFile);
-
-    	String line = "";
-    	while ((line = rd.readLine()) != null) {
-    		writer.append(line);
-
-    		
-    	}
-    	writer.close();
+    	return response.getEntity().getContent();
+     
+    	
 
 	}
-	
-	public static JsonNode getJSONRootFromFile(File inputFile) throws JsonParseException, JsonMappingException, IOException{
-		JsonNode rootNode = null;
-		// general method, same as with data binding
-		ObjectMapper mapper = new ObjectMapper();
-		rootNode = mapper.readTree(inputFile); 
-		return rootNode;
-	}
+
 }
