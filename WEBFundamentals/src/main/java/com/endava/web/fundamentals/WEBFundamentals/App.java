@@ -1,6 +1,7 @@
 package com.endava.web.fundamentals.WEBFundamentals;
 
 import html.Petstore;
+import html.SwaggerHTML;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -46,12 +47,16 @@ public class App
     {
     	InputStream jsonInputSTream = JSONFromURL.getHTMLFromURL("http://petstore.swagger.wordnik.com/api/api-docs");
     	ObjectMapper mapper = new ObjectMapper();
-    	Swagger swaggerDoc =  mapper.readValue(jsonInputSTream, Swagger.class);
+    	Swagger swagger =  mapper.readValue(jsonInputSTream, Swagger.class);
+    	SwaggerHTML html = new SwaggerHTML(swagger, new File("PetStore.html"));
     	
+    	synchronized(html){
+    		html.writeSwaggerHTML();
+    	}
     	
-        
-//    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(20008);
-//    	httpServer.start();
+      
+    	ElementaryHTTPServer httpServer = new ElementaryHTTPServer(8083);
+    	httpServer.start();
   
 
     	
