@@ -1,0 +1,25 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+	<listener>
+		<listener-class>listeners.InitializeApp</listener-class>
+	</listener>
+	<listener>
+		<listener-class>listeners.RequestListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>indexController</servlet-name>
+		<servlet-class>servlets.indexController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>indexController</servlet-name>
+		<url-pattern>/indexController</url-pattern>
+	</servlet-mapping>
+
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<el-ignored>false</el-ignored>
+		</jsp-property-group>
+	</jsp-config>
+
+</web-app>
