@@ -1,0 +1,16 @@
+com.endava.imdb.search
+com.endava.imdb.search.controller
+com.endava.imdb.search.dao
+com.endava.imdb.search.dao.implementation
+com.endava.imdb.search.domain.jackson.pooling
+com.endava.imdb.search.domain.jackson.tracktv
+com.endava.imdb.search.domain.jackson.tvrage
+com.endava.imdb.search.domain.jpa
+com.endava.imdb.search.domain.translate
+com.endava.imdb.search.form
+com.endava.imdb.search.result
+com.endava.imdb.search.service
+com.endava.imdb.search.service.impl
+com.endava.imdb.search.util
+com.endava.imdb.search.worker
+com.endava.imdb.search.worker.impl
